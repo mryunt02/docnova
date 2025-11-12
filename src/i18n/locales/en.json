@@ -1,0 +1,52 @@
+{
+  "login": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Login",
+    "emailRequired": "Please enter your email",
+    "passwordRequired": "Please enter your password",
+    "loginSuccess": "Login successful",
+    "loginError": "Login failed"
+  },
+  "invoice": {
+    "list": "Invoice List",
+    "detail": "Invoice Detail",
+    "invoiceNumber": "Invoice Number",
+    "date": "Date",
+    "issueDate": "Issue Date",
+    "dueDate": "Due Date",
+    "amount": "Amount",
+    "status": "Status",
+    "actions": "Actions",
+    "viewDetail": "View Detail",
+    "backToList": "Back to List",
+    "documentNumber": "Document Number",
+    "documentType": "Document Type",
+    "createdAt": "Created At",
+    "totalAmount": "Total Amount",
+    "taxAmount": "Tax Amount",
+    "netAmount": "Net Amount",
+    "currency": "Currency",
+    "description": "Description",
+    "customerName": "Customer Name",
+    "customerTaxNumber": "Customer Tax Number",
+    "customerVat": "Customer VAT",
+    "customerCountry": "Customer Country",
+    "supplierName": "Supplier Name",
+    "supplierVat": "Supplier VAT",
+    "lineExtensionAmount": "Line Total",
+    "taxExclusiveAmount": "Tax Exclusive Amount",
+    "taxInclusiveAmount": "Tax Inclusive Amount",
+    "payableAmount": "Payable Amount",
+    "paymentStatus": "Payment Status",
+    "paidAmount": "Paid Amount",
+    "remainingAmount": "Remaining Amount"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "noData": "No data found",
+    "logout": "Logout"
+  }
+}

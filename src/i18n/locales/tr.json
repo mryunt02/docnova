@@ -1,0 +1,52 @@
+{
+  "login": {
+    "title": "Giriş Yap",
+    "email": "E-posta",
+    "password": "Şifre",
+    "submit": "Giriş Yap",
+    "emailRequired": "Lütfen e-posta adresinizi girin",
+    "passwordRequired": "Lütfen şifrenizi girin",
+    "loginSuccess": "Giriş başarılı",
+    "loginError": "Giriş başarısız"
+  },
+  "invoice": {
+    "list": "Fatura Listesi",
+    "detail": "Fatura Detayı",
+    "invoiceNumber": "Fatura Numarası",
+    "date": "Tarih",
+    "issueDate": "Düzenleme Tarihi",
+    "dueDate": "Vade Tarihi",
+    "amount": "Tutar",
+    "status": "Durum",
+    "actions": "İşlemler",
+    "viewDetail": "Detay Gör",
+    "backToList": "Listeye Dön",
+    "documentNumber": "Belge Numarası",
+    "documentType": "Belge Tipi",
+    "createdAt": "Oluşturulma Tarihi",
+    "totalAmount": "Toplam Tutar",
+    "taxAmount": "KDV Tutarı",
+    "netAmount": "Net Tutar",
+    "currency": "Para Birimi",
+    "description": "Açıklama",
+    "customerName": "Müşteri Adı",
+    "customerTaxNumber": "Müşteri Vergi No",
+    "customerVat": "Müşteri KDV No",
+    "customerCountry": "Müşteri Ülkesi",
+    "supplierName": "Tedarikçi Adı",
+    "supplierVat": "Tedarikçi KDV No",
+    "lineExtensionAmount": "Satır Toplam",
+    "taxExclusiveAmount": "KDV Hariç Tutar",
+    "taxInclusiveAmount": "KDV Dahil Tutar",
+    "payableAmount": "Ödenecek Tutar",
+    "paymentStatus": "Ödeme Durumu",
+    "paidAmount": "Ödenen Tutar",
+    "remainingAmount": "Kalan Tutar"
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu",
+    "noData": "Veri bulunamadı",
+    "logout": "Çıkış Yap"
+  }
+}
