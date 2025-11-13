@@ -1,74 +1,79 @@
 import React from "react";
 import { Descriptions } from "antd";
 import { useTranslation } from "react-i18next";
-import { Invoice } from "../types";
+import { useSelector } from "react-redux";
+import { RootState } from "../store";
 
-interface InvoiceDetailsProps {
-  invoice: Invoice;
-}
-
-const InvoiceDetails: React.FC<InvoiceDetailsProps> = ({ invoice }) => {
+const InvoiceDetails: React.FC = () => {
   const { t } = useTranslation();
+  const { selectedInvoice } = useSelector((state: RootState) => state.invoice);
+
+  if (!selectedInvoice) return null;
 
   return (
     <Descriptions bordered column={1}>
       <Descriptions.Item label={t("invoice.invoiceNumber")}>
-        {invoice.invoiceNumber}
+        {selectedInvoice.invoiceNumber}
       </Descriptions.Item>
       <Descriptions.Item label={t("invoice.documentType")}>
-        {invoice.documentType}
+        {selectedInvoice.documentType}
       </Descriptions.Item>
       <Descriptions.Item label={t("invoice.status")}>
-        {invoice.status}
+        {selectedInvoice.status}
       </Descriptions.Item>
       <Descriptions.Item label={t("invoice.issueDate")}>
-        {new Date(invoice.issueDate).toLocaleDateString()}
+        {new Date(selectedInvoice.issueDate).toLocaleDateString()}
       </Descriptions.Item>
       <Descriptions.Item label={t("invoice.dueDate")}>
-        {new Date(invoice.dueDate).toLocaleDateString()}
+        {new Date(selectedInvoice.dueDate).toLocaleDateString()}
       </Descriptions.Item>
-      
+
       <Descriptions.Item label={t("invoice.customerName")}>
-        {invoice.customerName}
+        {selectedInvoice.customerName}
       </Descriptions.Item>
       <Descriptions.Item label={t("invoice.customerVat")}>
-        {invoice.customerVat}
+        {selectedInvoice.customerVat}
       </Descriptions.Item>
       <Descriptions.Item label={t("invoice.customerCountry")}>
-        {invoice.customerCountryCode}
+        {selectedInvoice.customerCountryCode}
       </Descriptions.Item>
-      
+
       <Descriptions.Item label={t("invoice.supplierName")}>
-        {invoice.supplierName}
+        {selectedInvoice.supplierName}
       </Descriptions.Item>
       <Descriptions.Item label={t("invoice.supplierVat")}>
-        {invoice.supplierVat}
+        {selectedInvoice.supplierVat}
       </Descriptions.Item>
-      
+
       <Descriptions.Item label={t("invoice.currency")}>
-        {invoice.currency}
+        {selectedInvoice.currency}
       </Descriptions.Item>
       <Descriptions.Item label={t("invoice.lineExtensionAmount")}>
-        {invoice.lineExtensionAmount?.toFixed(2)} {invoice.currency}
+        {selectedInvoice.lineExtensionAmount?.toFixed(2)}{" "}
+        {selectedInvoice.currency}
       </Descriptions.Item>
       <Descriptions.Item label={t("invoice.taxExclusiveAmount")}>
-        {invoice.taxExclusiveAmount?.toFixed(2)} {invoice.currency}
+        {selectedInvoice.taxExclusiveAmount?.toFixed(2)}{" "}
+        {selectedInvoice.currency}
       </Descriptions.Item>
       <Descriptions.Item label={t("invoice.taxInclusiveAmount")}>
-        {invoice.taxInclusiveAmount?.toFixed(2)} {invoice.currency}
+        {selectedInvoice.taxInclusiveAmount?.toFixed(2)}{" "}
+        {selectedInvoice.currency}
       </Descriptions.Item>
       <Descriptions.Item label={t("invoice.payableAmount")}>
-        {invoice.payableAmount?.toFixed(2)} {invoice.currency}
+        {selectedInvoice.payableAmount?.toFixed(2)} {selectedInvoice.currency}
       </Descriptions.Item>
-      
+
       <Descriptions.Item label={t("invoice.paymentStatus")}>
-        {invoice.paymentDetails.paymentStatus}
+        {selectedInvoice.paymentDetails.paymentStatus}
       </Descriptions.Item>
       <Descriptions.Item label={t("invoice.paidAmount")}>
-        {invoice.paymentDetails.paidAmount?.toFixed(2)} {invoice.currency}
+        {selectedInvoice.paymentDetails.paidAmount?.toFixed(2)}{" "}
+        {selectedInvoice.currency}
       </Descriptions.Item>
       <Descriptions.Item label={t("invoice.remainingAmount")}>
-        {invoice.paymentDetails.remainingAmount?.toFixed(2)} {invoice.currency}
+        {selectedInvoice.paymentDetails.remainingAmount?.toFixed(2)}{" "}
+        {selectedInvoice.currency}
       </Descriptions.Item>
     </Descriptions>
   );

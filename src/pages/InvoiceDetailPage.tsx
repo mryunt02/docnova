@@ -35,7 +35,7 @@ const InvoiceDetailPage: React.FC = () => {
           </Button>
         }
       >
-        <InvoiceDetails invoice={selectedInvoice} />
+        <InvoiceDetails />
       </Card>
     </div>
   );
